@@ -1,58 +1,80 @@
-<!DOCTYPE html>
-<html>
-    <style>
-        body, html {
-        height: 100%;
-        margin: 0;
-        }
+<?php
+//load base classes
+include 'controllers/Controller.php';
+include 'views/View.php';
+include 'models/Model.php';
+//
 
-        .bgimg {
-        background-image: url('/w3images/forestbridge.jpg');
-        height: 100%;
-        background-position: center;
-        background-size: cover;
-        position: relative;
-        color: white;
-        font-family: "Courier New", Courier, monospace;
-        font-size: 25px;
-        }
+//----load others----
+foreach (glob("controllers/*.php") as $filename)
+{
+	if ($filename != 'controllers/Controller.php')
+	{
+    	include $filename;
+	}
+}
 
-        .topleft {
-        position: absolute;
-        top: 0;
-        left: 16px;
-        }
+foreach (glob("views/*.php") as $filename)
+{
+    if ($filename != 'views/View.php')
+	{
+    	include $filename;
+	}
+}
 
-        .bottomleft {
-        position: absolute;
-        bottom: 0;
-        left: 16px;
-        }
+foreach (glob("models/*.php") as $filename)
+{
+    if ($filename != 'models/Model.php')
+	{
+    	include $filename;
+	}
+}
+//----finish loading----
+//
 
-        .middle {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        }
+function renderHeader()
+{
+	$view = new View(null);
+	$viewFields['Logo'] = 'resources/images/scruffypigeonlogo.png';
+	$view->render('views/partials/_header.phtml', $viewFields);
+}
 
-        hr {
-        margin: auto;
-        width: 40%;
-        }
-    </style>
-    <body>
-        <div class="bgimg">
-            <div class="topleft">
-                <p>Logo</p>
-            </div>
-            <div class="middle">
-                <h1>COMING SOON</h1>
-            </div>
-            <div class="bottomleft">
-                <p>scruffypigeon.co.uk is being set up. Please be patient</p>
-            </div>
-        </div>
-    </body>
-</html>
+function renderNav()
+{
+	$view = new View(null);
+	$view->render('views/partials/_navigation.phtml');
+}
+
+function renderHeadMetaTitleEtc()
+{
+	$view = new View(null);
+	$view->render('views/partials/_headmetatitle.phtml');
+}
+
+function renderFooter()
+{
+	$view = new View(null);
+	$view->render('views/partials/_footer.phtml');
+}
+
+function renderBody()
+{
+	if (isset($_GET['controller']) && !empty($_GET['controller'])) {
+	$controllerName = $_GET['controller'] . 'Controller';
+    $controller = new $controllerName();
+	}
+	if (isset($_GET['action']) && !empty($_GET['action'])) {
+	    $controller->{$_GET['action']}();
+	}
+}
+
+function renderSite()
+{
+	renderHeadMetaTitleEtc();
+	renderHeader();
+	renderNav();
+	renderBody();
+	renderFooter();
+}
+
+renderSite();
