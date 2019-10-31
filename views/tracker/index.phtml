@@ -1,0 +1,27 @@
+<div class="tracker">
+    <div>
+        <form action="index.php?controller=Tracker&action=Add" method="post" enctype="multipart/form-data">
+            Select image to upload:
+            <input type="text" name="mealTitle" id="mealTitle">
+            <input type="text" name="mealCalories" id="mealCalories">
+            <input type="submit" value="Add" name="submit">
+        </form>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <td>Meal</td>
+                <td>Calories</td>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach($this->viewFields['rows'] as $row) { ?>
+                <tr>
+                    <td><?php echo $row['title'] ?></td>
+                    <td><?php echo $row['calories'] ?></td>
+                </tr>
+            <?php } ?>
+        </tbody>
+    </table>
+</div>

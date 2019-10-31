@@ -1,0 +1,2 @@
+[Thu Oct 31 13:06:51.763339 2019] [ssl:warn] [pid 3199] AH01909: RSA certificate configured for scruffypigeon.aarong.3ev.in:443 does NOT include an ID which matches the server name
+[Thu Oct 31 13:06:51.805056 2019] [ssl:warn] [pid 3200] AH01909: RSA certificate configured for scruffypigeon.aarong.3ev.in:443 does NOT include an ID which matches the server name

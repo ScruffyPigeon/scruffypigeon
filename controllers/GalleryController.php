@@ -20,6 +20,6 @@ class GalleryController extends Controller
 		$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 		move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
 
-    	$this->view->render('gallery/index.phtml', $viewFields);
+        $this->redirect('Gallery', 'Index');
     }
 }

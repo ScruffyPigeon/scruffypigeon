@@ -5,7 +5,7 @@ class View
     private $model;
     public $viewFields;
 
-    public function __construct($model) {
+    public function __construct($model = null) {
         $this->model = $model;
         $this->viewFields = array();
     }

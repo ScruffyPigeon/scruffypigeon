@@ -1,0 +1,38 @@
+[31-Oct-2019 13:17:55 UTC] PHP Notice:  Undefined variable: viewFields in /var/www/vhosts/scruffypigeon/controllers/GalleryController.php on line 23
+[31-Oct-2019 13:17:55 UTC] PHP Stack trace:
+[31-Oct-2019 13:17:55 UTC] PHP   1. {main}() /var/www/vhosts/scruffypigeon/index.php:0
+[31-Oct-2019 13:17:55 UTC] PHP   2. renderSite() /var/www/vhosts/scruffypigeon/index.php:80
+[31-Oct-2019 13:17:55 UTC] PHP   3. renderBody() /var/www/vhosts/scruffypigeon/index.php:76
+[31-Oct-2019 13:17:55 UTC] PHP   4. GalleryController->Upload() /var/www/vhosts/scruffypigeon/index.php:67
+[31-Oct-2019 13:17:55 UTC] PHP Notice:  Undefined index: Images in /var/www/vhosts/scruffypigeon/views/gallery/index.phtml on line 6
+[31-Oct-2019 13:17:55 UTC] PHP Stack trace:
+[31-Oct-2019 13:17:55 UTC] PHP   1. {main}() /var/www/vhosts/scruffypigeon/index.php:0
+[31-Oct-2019 13:17:55 UTC] PHP   2. renderSite() /var/www/vhosts/scruffypigeon/index.php:80
+[31-Oct-2019 13:17:55 UTC] PHP   3. renderBody() /var/www/vhosts/scruffypigeon/index.php:76
+[31-Oct-2019 13:17:55 UTC] PHP   4. GalleryController->Upload() /var/www/vhosts/scruffypigeon/index.php:67
+[31-Oct-2019 13:17:55 UTC] PHP   5. View->render() /var/www/vhosts/scruffypigeon/controllers/GalleryController.php:23
+[31-Oct-2019 13:17:55 UTC] PHP   6. require_once() /var/www/vhosts/scruffypigeon/views/View.php:19
+[31-Oct-2019 13:17:55 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/vhosts/scruffypigeon/views/gallery/index.phtml on line 6
+[31-Oct-2019 13:17:55 UTC] PHP Stack trace:
+[31-Oct-2019 13:17:55 UTC] PHP   1. {main}() /var/www/vhosts/scruffypigeon/index.php:0
+[31-Oct-2019 13:17:55 UTC] PHP   2. renderSite() /var/www/vhosts/scruffypigeon/index.php:80
+[31-Oct-2019 13:17:55 UTC] PHP   3. renderBody() /var/www/vhosts/scruffypigeon/index.php:76
+[31-Oct-2019 13:17:55 UTC] PHP   4. GalleryController->Upload() /var/www/vhosts/scruffypigeon/index.php:67
+[31-Oct-2019 13:17:55 UTC] PHP   5. View->render() /var/www/vhosts/scruffypigeon/controllers/GalleryController.php:23
+[31-Oct-2019 13:17:55 UTC] PHP   6. require_once() /var/www/vhosts/scruffypigeon/views/View.php:19
+[31-Oct-2019 13:36:34 UTC] PHP Warning:  file_get_contents(../resources/data/test.json): failed to open stream: No such file or directory in /var/www/vhosts/scruffypigeon/models/TrackerModel.php on line 15
+[31-Oct-2019 13:36:34 UTC] PHP Stack trace:
+[31-Oct-2019 13:36:34 UTC] PHP   1. {main}() /var/www/vhosts/scruffypigeon/index.php:0
+[31-Oct-2019 13:36:34 UTC] PHP   2. renderSite() /var/www/vhosts/scruffypigeon/index.php:80
+[31-Oct-2019 13:36:34 UTC] PHP   3. renderBody() /var/www/vhosts/scruffypigeon/index.php:76
+[31-Oct-2019 13:36:34 UTC] PHP   4. TrackerController->Index() /var/www/vhosts/scruffypigeon/index.php:67
+[31-Oct-2019 13:36:34 UTC] PHP   5. TrackerModel->getData() /var/www/vhosts/scruffypigeon/controllers/TrackerController.php:14
+[31-Oct-2019 13:36:34 UTC] PHP   6. file_get_contents() /var/www/vhosts/scruffypigeon/models/TrackerModel.php:15
+[31-Oct-2019 13:36:34 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/vhosts/scruffypigeon/views/tracker/index.phtml on line 19
+[31-Oct-2019 13:36:34 UTC] PHP Stack trace:
+[31-Oct-2019 13:36:34 UTC] PHP   1. {main}() /var/www/vhosts/scruffypigeon/index.php:0
+[31-Oct-2019 13:36:34 UTC] PHP   2. renderSite() /var/www/vhosts/scruffypigeon/index.php:80
+[31-Oct-2019 13:36:34 UTC] PHP   3. renderBody() /var/www/vhosts/scruffypigeon/index.php:76
+[31-Oct-2019 13:36:34 UTC] PHP   4. TrackerController->Index() /var/www/vhosts/scruffypigeon/index.php:67
+[31-Oct-2019 13:36:34 UTC] PHP   5. View->render() /var/www/vhosts/scruffypigeon/controllers/TrackerController.php:15
+[31-Oct-2019 13:36:34 UTC] PHP   6. require_once() /var/www/vhosts/scruffypigeon/views/View.php:19
